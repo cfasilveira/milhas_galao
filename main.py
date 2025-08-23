@@ -17,7 +17,7 @@ print(tabulate.tabulate(df, headers='keys', tablefmt='fancy_grid', showindex=Fal
 scaler = StandardScaler()
 df[['Milhas por galao', 'Cilindrada', 'Cilindros', 'CV', 'kilo milhares']] = scaler.fit_transform(df[['Milhas por galao', 'Cilindrada', 'Cilindros', 'CV', 'kilo milhares']])
 print(tabulate.tabulate(df, headers='keys', tablefmt='fancy_grid', showindex=False))
-"""
+
 # Graficos comparativos das fetures com print(tabulate.tabulate(df, headers='keys', tablefmt='fancy_grid'))
 # subplots
 fig = make_subplots(rows=2, cols=2, subplot_titles=('Cilindrada/Milhas', 'Cilindros/Milhas', 'CV/Milhas', 'Kilos/Milhas'))
@@ -45,7 +45,6 @@ corr = df.corr()
 fig_corr = px.imshow(corr, text_auto=True, aspect="auto", title='Heatmap da Matriz de Correlação')
 fig_corr.update_layout(xaxis_showgrid=False, yaxis_showgrid=False)
 fig_corr.show()
-"""
 
 # Correlações Positivas e Negativas
 corr = df.iloc[:, 1:].corr() # Exclui a primeira coluna (Libras em milhares)
