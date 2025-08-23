@@ -1,0 +1,11 @@
+# Ignorar ambiente virtual
+venv/
+
+# Ignorar cache compilado Python
+__pycache__/
+*.pyc
+
+# Ignorar arquivos temporários e de edição
+*.swp
+.vscode/
+.idea/
